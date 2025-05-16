@@ -14,7 +14,7 @@ const RegisterPage = () => {
       await registerUser({ name, email, password });
       const { token } = await loginUser({ email, password });
       localStorage.setItem('token', token);
-      navigate('/editor');
+      navigate('/blogs');
     } catch (err) {
       alert('Registration or login failed');
     }
