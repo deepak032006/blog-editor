@@ -12,7 +12,7 @@ const LoginPage = () => {
     try {
       const { token } = await loginUser({ email, password });
       localStorage.setItem('token', token);
-      navigate('/editor');
+      navigate('/blogs');
     } catch (err) {
       alert('Login failed');
     }
