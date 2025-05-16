@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000/api/auth';
+const API = 'https://blog-editor-1.onrender.com/api/auth';
 
 export const loginUser = async (credentials) => {
   const res = await fetch(`${API}/login`, {
