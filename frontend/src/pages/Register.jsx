@@ -11,16 +11,9 @@ const RegisterPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      // 1. Register user
       await registerUser({ name, email, password });
-
-      // 2. Automatically log in
       const { token } = await loginUser({ email, password });
-
-      // 3. Save token
       localStorage.setItem('token', token);
-
-      // 4. Navigate to editor
       navigate('/editor');
     } catch (err) {
       alert('Registration or login failed');
