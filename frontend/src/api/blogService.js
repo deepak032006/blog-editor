@@ -1,4 +1,4 @@
-const API = 'http://localhost:5000/api/blogs';
+const API = 'https://blog-editor-1.onrender.com/api/blogs';
 
 // Save blog as draft (no auth)
 export const saveDraft = async (data) => {
